@@ -1,0 +1,58 @@
+#create database and collection
+  1.use task-manager                        
+  2.db.createCollection("tasks")             
+
+#performing create operation on tasks:-
+  1.insertOne:-
+        db.tasks.insertOne({
+                 task:"Learning mongoDB",
+                 createdAt:"27th Feb, 2026",
+                 deadline:"28th feb, 2026",
+                 user:"Viranjali",
+                 isCompleted:false
+        })
+  2.insertMany:-
+        db.tasks.insertMany([
+                {
+                   task:"Workout",
+                   createdAt:"27 th feb, 2026",
+                   deadline:"28th feb, 2026",
+                   user:"Saee",
+                   isCompleted:false
+                },
+                {
+                   task:"singing",
+                   createdAt:"27th feb, 2026",
+                   deadline:"1st march, 2026",
+                   user:"viru",
+                   isCompleted:false
+                }
+           ])
+
+#read data
+          1.db.tasks.find()
+          2.db.tasks.find().pretty()
+          3.db.tasks.findOne({task:"singing"})
+
+#update data
+          1.updateOne:-
+                 db.tasks.updateOne(
+                      {task:"singing"},
+                      {$set:{isCompleted:true}}
+                    )
+          2.updateMany:-
+                 db.tasks.updateMany(
+                      {isCompleted:false},
+                      {$set:{isCompleted:true}}
+                    )
+
+#Delete data
+          1.deleteOne:-
+                 db.tasks.deleteOne(
+                         {task:"Learning mongoDB"}
+                    )
+          2.deleteMany:-
+                 db.tasks.deleteMany(
+                         {isCompleted:true}
+                    )
+        
