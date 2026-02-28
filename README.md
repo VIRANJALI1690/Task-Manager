@@ -35,6 +35,4 @@ See installation.txt file for setup instructions.
 
 Viranjali Game
 
-## Certification Requirement
-
 Built with love with the help of CipherSchools
