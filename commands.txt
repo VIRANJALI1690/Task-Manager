@@ -1,17 +1,23 @@
-#create database and collection
-  1.use task-manager                        
-  2.db.createCollection("tasks")             
+MongoDB Task Manager Project
 
-#performing create operation on tasks:-
-  1.insertOne:-
+1. Start MongoDB Shell
+
+     mongosh
+
+2.create database and collection
+           1.use task-manager                        
+           2.db.createCollection("tasks")             
+
+3.performing create operation on tasks:-
+       1.insertOne:-
         db.tasks.insertOne({
                  task:"Learning mongoDB",
                  createdAt:"27th Feb, 2026",
                  deadline:"28th feb, 2026",
                  user:"Viranjali",
                  isCompleted:false
-        })
-  2.insertMany:-
+               })
+      2.insertMany:-
         db.tasks.insertMany([
                 {
                    task:"Workout",
@@ -29,12 +35,12 @@
                 }
            ])
 
-#read data
+3.read data
           1.db.tasks.find()
           2.db.tasks.find().pretty()
           3.db.tasks.findOne({task:"singing"})
 
-#update data
+4.update data
           1.updateOne:-
                  db.tasks.updateOne(
                       {task:"singing"},
@@ -46,7 +52,7 @@
                       {$set:{isCompleted:true}}
                     )
 
-#Delete data
+5.Delete data
           1.deleteOne:-
                  db.tasks.deleteOne(
                          {task:"Learning mongoDB"}

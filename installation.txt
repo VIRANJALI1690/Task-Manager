@@ -1,0 +1,24 @@
+MongoDB Task Manager Installation Guide
+
+Step 1: Install MongoDB
+Download MongoDB from:
+https://www.mongodb.com/try/download/community
+
+Step 2: Install MongoDB Shell (mongosh)
+Download from:
+https://www.mongodb.com/try/download/shell
+
+Step 3: Verify installation
+
+Open terminal and type:
+
+mongosh
+
+Step 4: Run commands from commands.txt file
+
+Copy and paste commands into mongosh terminal.
+
+Requirements:
+- MongoDB installed
+- MongoDB Shell installed
+- Git installed
